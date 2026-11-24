@@ -12,6 +12,20 @@ with instructions for the agent.
 
 ## How to use
 
+### Run in your terminal locally
+
+Run `./tutor` from this repository, or `./tutor Python` to choose a topic.
+This uses Python 3 and Ollama, with no Codex or API key. Install
+[Ollama](https://ollama.com/download) first if needed. The launcher starts the
+local server automatically and downloads `qwen2.5:3b` on first use (about 2 GB).
+After downloading, tutoring works offline. Type `/quit` or press Ctrl+C to exit.
+
+Use `./tutor --model MODEL` to select another local Ollama model. If no Ollama
+server is running, model files and server logs are stored in `.local/` in this
+repository. Conversation history is kept in memory for the current session.
+
+### Use as an agent skill
+
 With a coding agent that supports the common `SKILL.md` format, copy the skill
 directory into your agent's skills folder, then ask the agent to use it
 ("teach me X").
